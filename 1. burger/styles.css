@@ -1,0 +1,390 @@
+@font-face {
+  font-family: 'chicken';
+  src: url('fonts/CHICKEN\ Pie.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'crispy';
+  src: url('fonts/Crispy\ Food.ttf') format('truetype');
+}
+
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.preloader-content {
+  text-align: center;
+  font-family: 'chicken', sans-serif;
+  font-size: 48px;
+  color: #333;
+}
+
+.preloader-content span {
+  opacity: 0;
+  animation: appear 1s forwards;
+}
+
+.preloader-content span.r {
+  animation-duration: 0.5s;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body.preloader-active,
+html.preloader-active {
+  overflow: hidden;
+}
+
+/* Navbar  */
+.navbar {
+  background-color:transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.navbar-nav .nav-link {
+  color: #333 !important;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f4610c;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-nav .nav-link:hover {
+  color: #ff6347 !important; 
+}
+
+.navbar-toggler-icon {
+ color:#ff6347 !important;
+ background-color: #ff6347 !important;
+
+}
+
+/* Hero Section */
+#hero {
+  padding-left: 7rem;
+  padding-right:7rem;
+  display: flex;
+  height: 70vh;
+  position: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+
+
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.hero-text {
+  flex: 1;
+  background-color: #f8f9fa; 
+  text-align: left;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.hero-text .medium-text {
+  font-size: 2rem;
+  color: #333;
+}
+
+.hero-text .title-text {
+  font-family: 'chicken';
+  font-size: 6rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  
+}
+
+.hero-text .paragraph-text {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.hero-text .btn {
+  background-color: #f57d04; 
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.hero-text .btn:hover {
+  background-color: #e5533d; 
+  transform: scale(1.05);
+}
+
+.hero-text .btn:active {
+  background-color: #cc4a33; 
+  transform: scale(1);
+}
+
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background-color: #f57d04;
+  transform: translateY(-48%);
+  z-index: -1;
+
+}
+@media (max-width: 992px) {
+  .hero-text .title-text {
+    font-size: 4rem;
+  }
+  .hero-text .medium-text {
+    font-size: 1.5rem;
+  }
+  .hero-text .paragraph-text {
+    font-size: 1rem;
+}
+}
+
+
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  .hero-text {
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-image::before {
+    display: none;
+  }
+
+  .hero-text .btn {
+    font-size: 1rem;
+}
+}
+
+/* Our Burgers Section */
+#selling-burgers {
+  background-color: #f8f9fa;
+  flex-direction: column;
+  padding: 3rem 0;
+  
+}
+
+#selling-burgers h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+#selling-burgers .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f3a353;
+  border-radius: 5rem;
+  overflow: hidden; 
+  margin-bottom: 2rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selling-burgers .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #f48a20;
+}
+
+#selling-burgers .card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  object-fit: cover;
+  width: 80%;
+  height: auto;
+}
+
+#selling-burgers .card-body {
+  background-color: #fff;
+  padding: 1rem;
+
+}
+
+#selling-burgers .card-title {
+  font-family: 'crispy';
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#selling-burgers .card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  #selling-burgers .container {
+    padding: 0 1rem;
+  }
+  #selling-burgers .card {
+    display: block;
+    max-width: 70%; 
+    margin: 0 auto 2rem auto; 
+  }
+  #selling-burgers .card-img-top {
+    width: 100%;
+    height: auto;
+    max-width: 80%;
+  }
+  #selling-burgers .card {
+    flex-direction: column;
+  }
+  #selling-burgers h2 {
+    font-size: 2rem;
+  }
+}
+
+/* customisation section */
+#burger-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.ingredient-label {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.line {
+  position: absolute;
+  width: 2px;
+  background-color: white;
+}
+
+
+
+.selected {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.remove-btn {
+  float: right;
+  cursor: pointer;
+  color: red;
+}
+#create-burger {
+  background-color: #f57d04; 
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+#create-burger:hover {
+  background-color: #e5533d; 
+  transform: scale(1.05);
+}
+
+/* footer section */
+#footer {
+  background-color: #333;
+  color: #fff;
+}
+
+#footer p {
+  margin: 0;
+} 
+
+/* about section */
+body.modal-open main {
+  filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #f8f9fa;
+  border-radius: 1rem;
+}
+.modal-header, .modal-body {
+  border: none;
+}
+.modal-title {
+  font-family: 'chicken';
+  font-size: 2rem;
+  color: #333;
+}
