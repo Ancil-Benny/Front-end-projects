@@ -1,0 +1,333 @@
+@font-face {
+    font-family: esphimere;
+    src: url(../fonts/Esphimere\ Light.otf);
+}
+
+/* -------------------------------------------
+   Reset and Base Styles
+------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* -------------------------------------------
+   Variables
+------------------------------------------- */
+:root {
+    /* Modern color scheme */
+    --primary-color: #ce0a0a; /* Vibrant automotive red */
+    --secondary-color: #1a1a1a; /* Rich black */
+    --accent-color: #f0f0f0; /* Light grey for sections */
+    --text-color: #333333;
+    --light-text: #6e6e6e;
+    --white: #ffffff;
+    --light-grey: #f8f8f8;
+    --border-color: #e0e0e0;
+    
+    /* Effects */
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --border-radius: 4px;
+    --large-radius: 12px;
+}
+
+/* -------------------------------------------
+   Typography
+------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+  
+    
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    color: var(--light-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+/* -------------------------------------------
+   Layout and Utilities
+------------------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.section-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.accent-bg {
+    background-color: var(--accent-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* -------------------------------------------
+   Button Styles - Clean & Modern
+------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.primary-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.primary-btn:hover::before {
+    width: 100%;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* -------------------------------------------
+   Modern Header & Navigation
+------------------------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+    background-color: black;
+    color: white;
+
+}
+
+.navbar.sticky {
+    padding: 0.7rem 3rem;
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+    font-weight: 900;
+    font-family: esphimere;
+    margin-bottom: 0.25rem;
+    color: white;
+}
+.navbar.sticky .logo h1 {
+    color: var(--secondary-color);
+}
+.logo span {
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: esphimere;
+    color: white;
+}
+.navbar.sticky .nav-links a {
+    color: var(--secondary-color); 
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover::after, 
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.mobile-menu.active i:before {
+    content: "\f00d";
+}
+
+/* Media queries for responsive navbar */
+@media screen and (max-width: 991px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar.sticky {
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+}
