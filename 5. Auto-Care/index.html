@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two-Wheeler Services</title>
+    <title>The Auto Care</title>
+
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- font-awesome icon pack-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <!-- <img src="logo.png" alt="Logo"> -->
                 <h1>The <span>Auto Care</span></h1>
             </div>
             <ul class="nav-links">
@@ -24,25 +30,38 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+    <!--mobile menu bar-->
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- hero section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Two-Wheeler</br> Service & Repair</h1>
-            <h2>The Complete Automotive Solutions</h2>
-            <p>Specialized in engine works, painting, denting, polishing, and insurance claims for all vehicles</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn primary-btn">Book Service</a>
-                <a href="#services" class="btn secondary-btn">Our Services</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Two-Wheeler</br> Service & Repair</h1>
+    <!-- Mobile-only image-->
+                <div class="hero-image-mobile">
+                    <img src="images/scooter.png" alt="Motorcycle Service">
+                </div>   
+
+                <h2>The Complete Automotive Solutions</h2>
+                <p>Specialized in engine works, painting, denting, polishing, and insurance claims for all vehicles</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn primary-btn">Book Service</a>
+                    <a href="#about" class="btn secondary-btn">About Us</a>
+                </div>
+            </div>
+            
+            <!-- Desktop-only image -->
+            <div class="hero-image-desktop">
+                <img src="images/scooter2.png" alt="Motorcycle Service">
             </div>
         </div>
     </section>
-
+    
       <!-- Services Section -->
       <section id="services" class="services">
         <div class="container">
@@ -189,30 +208,23 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About The Auto Care</h2>
+                    
+                    <!-- Mobile-only image-->
+                    <div class="about-image-mobile">
+                        <img src="images/car-engine.jpg" alt="image">
+                    </div>
+                    
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, sed nisi, mollitia quibusdam maxime officiis libero, recusandae consectetur cupiditate soluta adipisci fuga sapiente repellendus quam id asperiores et laborum delectus!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, corporis?</p>
                     <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Certified Technicians</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Genuine Parts</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Warranty on Services</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Modern Equipment</span>
-                        </div>
+                        <!-- Features content -->
                     </div>
-                    <a href="#contact" class="btn primary-btn">Contact Us</a>
+                    <a href="#footer-content" class="btn primary-btn">Follow Us</a>
                 </div>
-                <div class="about-image">
-                    <img src="about-image.jpg" alt="image">
+                
+                <!-- Desktop-only image -->
+                <div class="about-image-desktop">
+                    <img src="images/car-engine.jpg" alt="image">
                 </div>
             </div>
         </div>
@@ -297,53 +309,59 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Logo">
-                    <h2>The <span>Auto Care</span></h2>
-                    <p>Your trusted partner for all automotive needs</p>
+  <!-- Footer -->
+<footer>
+    <div class="container">
+        <div id="footer-content">
+            <div class="footer-logo">
+                <h2>The <span>Auto Care</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vel!</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone-alt"></i> +91 3333 3333</p>
+                    <p><i class="fas fa-envelope"></i> info@theautocare.com</p>
                 </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-services">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li>Engine Works</li>
-                        <li>Painting & Denting</li>
-                        <li>Polishing & Detailing</li>
-                        <li>Insurance Claims</li>
-                        <li>Regular Maintenance</li>
-                    </ul>
-                </div>
-             
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-               
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 The Auto Care. All Rights Reserved.</p>
-                <div class="terms">
-                    <a href="#">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="#">Terms of Service</a>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Engine Works</li>
+                    <li>Painting & Denting</li>
+                    <li>Polishing & Detailing</li>
+                    <li>Insurance Claims</li>
+                    <li>Regular Maintenance</li>
+                </ul>
+            </div>
+            <div class="footer-connect">
+                <h3>Connect With Us</h3>
+                <p>Follow us on social media</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 The Auto Care. All Rights Reserved.</p>
+            <div class="terms">
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <script src="scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
