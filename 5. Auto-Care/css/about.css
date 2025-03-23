@@ -1,0 +1,122 @@
+.about {
+    background-color: white;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+#about.about{
+    padding-top: 40px;
+}
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.about-image-mobile {
+    display: none; /* Hide on desktop */
+}
+
+.about-image-desktop {
+    position: relative;
+}
+
+.about-image-desktop::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--primary-color);
+    z-index: -1;
+}
+
+.about-image-desktop img,
+.about-image-mobile img {
+    border-radius: 5%;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+}
+
+.feature i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 991px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Show mobile image, hide desktop image */
+    .about-image-desktop {
+        display: none;
+    }
+    
+    .about-image-mobile {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 0 auto 20px;
+        max-width: 500px; 
+    }
+    
+    .about-image-mobile::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 100%;
+        height: 100%;
+        border: 5px solid var(--primary-color);
+        z-index: -1;
+    }
+    
+    .about-text h2 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .about-text p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image-mobile::before {
+        display: none;
+    }
+    
+    .about-image-mobile {
+        width: 100%;
+    }
+}
